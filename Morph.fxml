@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MorphController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="OPERATION :">
+         <font>
+            <Font name="Cooper Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="46.0" text="Kernel Size :">
+         <font>
+            <Font name="Cooper Black" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="80.0" text="Shape :">
+         <font>
+            <Font name="Cooper Black" size="17.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="dilate_btn" layoutX="256.0" layoutY="14.0" mnemonicParsing="false" onAction="#onDilate" text="Dilate" textAlignment="CENTER" />
+      <RadioButton fx:id="erode_btn" layoutX="137.0" layoutY="14.0" mnemonicParsing="false" onAction="#onErode" prefHeight="17.0" prefWidth="62.0" text="Erode" textAlignment="CENTER" />
+      <RadioButton fx:id="open_btn" layoutX="375.0" layoutY="14.0" mnemonicParsing="false" onAction="#onOpen" text="Open" />
+      <RadioButton fx:id="close_btn" layoutX="498.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClose" text="Close" />
+      <RadioButton fx:id="rect_btn" layoutX="169.0" layoutY="82.0" mnemonicParsing="false" onAction="#onRect" text="Rectangle" />
+      <RadioButton fx:id="ellipse_btn" layoutX="343.0" layoutY="82.0" mnemonicParsing="false" onAction="#onEllipse" text="Ellipse" />
+      <RadioButton fx:id="cross_btn" layoutX="498.0" layoutY="82.0" mnemonicParsing="false" onAction="#onCross" text="Cross" />
+      <Slider fx:id="slider" blockIncrement="2.0" layoutX="133.0" layoutY="39.0" majorTickUnit="2.0" max="20.0" minorTickCount="1" prefHeight="38.0" prefWidth="485.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <ImageView fx:id="currentFrame" fitHeight="294.0" fitWidth="611.0" layoutX="9.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>
